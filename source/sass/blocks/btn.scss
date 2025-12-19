@@ -1,26 +1,53 @@
 .btn {
   display: inline-flex;
   padding: 15px;
-
   color: $color-default-white;
-
   background-color: $color-accent-main;
-  border: none;
   cursor: pointer;
-
   transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-accent-second;
-  }
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 
   @include hover-focus {
     opacity: 0.8;
   }
+}
+.buttons-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    width: 67%;
+    gap: 30px;
+    margin-left: 1px;
+}
+
+.buttons-wrapper__button {
+    width: 183px;
+    height: 43px;
+    padding: 14px;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--primary {
+        background-color: $color-accent-main;
+        color: $color-default-white;
+        border: 1px solid $color-default-white;
+    }
+
+    &--secondary {
+       background-color: $color-default-white;
+        color: #2a2b30;
+        border: 1px solid #6f6d7b; 
+    }
 }
