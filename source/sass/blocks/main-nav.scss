@@ -1,0 +1,31 @@
+.main-nav {
+  &__list {
+    display: flex;
+    margin: 13px 0 0;
+    padding: 0;
+    gap: 10px 60px;
+    list-style: none;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: $color-default-white;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: -0.09px;
+    text-align: right;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    &.is-active {
+      color: #43ABF0;
+    }
+  }
+
+  &__toggle {
+    display: none;
+  }
+}

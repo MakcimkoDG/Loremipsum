@@ -1,0 +1,23 @@
+mixin index-hero()
+    section.hero
+        .container
+            h1.hero__title.hero-title
+                span.hero-title__text.text-accent Lorem ipsum 
+                span.hero-title__text dolor sit ametconsectetur 
+                span.hero-title__text.text-accent adipiscing
+            h2.hero__subtitle At vero eos et accusamus et iusto odio dignissimos ducimus!
+            ul.hero__list.hero-list
+                li.hero-list__item Totam rem aperiam eaque ipsa
+                li.hero-list__item Sit voluptatem accusantium doloremque laudantium
+                li.hero-list__item Sed ut perspiciatis, unde omnis iste natus error
+            .wrapper
+                +btn({
+                    tag:"a",
+                    href:"#",
+                    text:"Заказать"
+                }).hero__button.hero__button.button.button--primary
+                +btn({
+                    tag:"a",
+                    href:"#",
+                    text:"Подробнее"
+                }).hero__button.hero__button.button.button--secondary

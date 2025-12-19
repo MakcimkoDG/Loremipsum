@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 26px;
+  background-color: $color-background-header;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+  }
+
+  &__logo {
+    color: $color-default-white;
+    margin-top: 7px;
+    margin-left: 3px;
+  }
+}

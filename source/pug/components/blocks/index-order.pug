@@ -1,0 +1,53 @@
+mixin index-order()
+  section.order
+    .container
+      h2.order__title.order-title
+        span.order-title__text Оформление 
+        span.order-title__text.text-accent заказа
+      ul.order__list.process-list
+        li.process-list__item.process-item
+          span.process-item__icon.process-icon
+            +icon("icone_search", 55, 55)
+          span.process-item__text Lorem ipsum dolor sit amet
+        li.process-list__item.process-item
+          span.process-item__icon.process-icon
+            +icon("icon_percent", 55, 55)
+          span.process-item__text Сonsecteturadipiscing elit
+        li.process-list__item.process-item
+          span.process-item__icon.process-icon
+            +icon("icon_file2", 55, 55)
+          span.process-item__text Sed do eiusmod tempor
+        li.process-list__item.process-item
+          span.process-item__icon.process-icon
+            +icon("icon_message", 55, 55)
+          span.process-item__text Esse cillum dolore eu fugiat
+        li.process-list__item.process-item
+          span.process-item__icon.process-icon
+            +icon("icon_money", 55, 55)
+          span.process-item__text Excepteur sint occaecat cupidatat non proident
+      form(action="#", method="post").order__form.order-form
+        label.order-form__label
+          span.visually-hidden Тип системы
+          select.order-form__select(name="system-type")
+            option(value="Sed ut perspiciatis") Sed ut perspiciatis
+            option(value="Nemo enim ipsam") Nemo enim ipsam
+            option(value="Et harum quidem") Et harum quidem
+            option(value="Temporibus autem") Temporibus autem
+            option(value="Itaque earum rerum") Itaque earum rerum
+            option(value="Sed ut perspiciatis") Sed ut perspiciatis
+            option(value="Sed ut perspiciatis") Sed ut perspiciatis
+            option(value="Sed ut perspiciatis") Sed ut perspiciatis
+          label.order-form__label
+            span.visually-hidden E-mail
+            input.order-form__input(type="text" name="email" placeholder="Ваш e-mail")
+          label.order-form__label
+            span.visually-hidden Имя
+            input.order-form__input(type="text" name="name" placeholder="Ваше имя" i)
+          label.order-form__label
+            span Sed ut perspiciatis, unde omnis iste natus
+            input.order-form__input(type="text" name="name" placeholder="Ваше имя")
+          label.order-form__label.input-file
+            +icon("icon_file, 20, 20").input-file__icon
+            span.input-file__text Прикрепить файл
+            input.order-form__download(type="file" name="file" data-input-file)
+          input.order-form__submit(type="submit" value="Отправить")
