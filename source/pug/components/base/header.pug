@@ -29,7 +29,8 @@ mixin header(headerMods, currentUrl)
         a.header__logo(href="index.html", aria-label="Переход на главную")
           +icon("logo_desktop", 244, 35)
       button.header__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false" data-nav-toggle)
-          +icon("icon_burger", 20, 20)
+          +icon("icon_burger", 40, 40).btn-reset__icon.icon-burger
+          +icon("icon_close", 40, 40).btn-reset__icon.icon-close
       nav.main-nav(data-main-nav)
         .main-nav__wrapper
           ul.main-nav__list

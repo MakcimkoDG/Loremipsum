@@ -41,8 +41,8 @@
     text-transform: uppercase;
 
     @include vp-767 {
-      font-size: 20px;
-      padding: 20px 5px;
+      font-size: 16px;
+      padding: 15px 5px;
       display: block;
     }
 
@@ -53,7 +53,7 @@
     }
 
     &:active {
-      color:$color-accent-second;
+      color: $color-accent-second;
     }
   }
 
@@ -64,4 +64,18 @@
       display: block;
     }
   }
+}
+
+.header__toggle .icon-close {
+  color: $color-default-white
+}
+
+.header__toggle .icon-close,
+.header__toggle.is-open .icon-burger {
+  display: none;
+}
+
+
+.header__toggle.is-open .icon-close {
+  display: block;
 }
