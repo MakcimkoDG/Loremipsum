@@ -5,6 +5,18 @@
   background-color: $color-accent-main;
   cursor: pointer;
   transition: opacity $trans-default;
+  padding: 14px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:disabled {
     opacity: 0.5;
@@ -14,40 +26,44 @@
   @include hover-focus {
     opacity: 0.8;
   }
+
+  &--primary {
+    background-color: $color-accent-main;
+    color: $color-default-white;
+    border: 1px solid $color-default-white;
+  }
+
+  &--secondary {
+    background-color: $color-default-white;
+    color: #2a2b30;
+    border: 1px solid #6f6d7b;
+  }
+
+  &--download {
+    border-radius: 3px;
+    border: 2px solid $color-accent-main;
+    background-color: $color-default-white;
+    color: #272733;
+    height: 48px;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    box-sizing: border-box;
+  }
 }
+
 .buttons-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    width: 67%;
-    gap: 30px;
-    margin-left: 1px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 67%;
+  gap: 30px;
+  margin-left: 1px;
 }
 
 .buttons-wrapper__button {
-    width: 183px;
-    height: 43px;
-    padding: 14px;
-    border-radius: 4px;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    vertical-align: middle;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &--primary {
-        background-color: $color-accent-main;
-        color: $color-default-white;
-        border: 1px solid $color-default-white;
-    }
-
-    &--secondary {
-       background-color: $color-default-white;
-        color: #2a2b30;
-        border: 1px solid #6f6d7b; 
-    }
+  width: 183px;
+  height: 43px;
 }
