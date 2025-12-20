@@ -26,7 +26,7 @@ mixin index-order()
           span.process-item__icon.process-icon
             +icon("icon_money", 55, 55)
           span.process-item__text Excepteur sint occaecat cupidatat non proident
-      form(action="#", method="post").order__form.order-form
+      form(action="#", method="post" data-order-form).order__form.order-form
         label.order-form__label.order-form__label--system
           span.visually-hidden Тип системы
           //- select.order-form__select(name="system-type" data-form-select data-placeholder="Выберите тип системы")
@@ -41,22 +41,22 @@ mixin index-order()
           +custom-select({
             placeholder: "Выберите тип системы",
             error: "Выберите тему обращения",
-            optionsList: [{text: "Sed ut perspiciatis", value: "Sed ut perspiciatis"}, {text: "Nemo enim ipsam", value: "Nemo enim ipsam"}, {text: "Et harum quidem", value: "Et harum quidem"}, {text: "Temporibus autem", value: "Temporibus autem"}, {text: "Itaque earum rerum", value: "Itaque earum rerum"}, {text: "Sed ut perspiciatis", value: "id-6"}, {text: "Sed ut perspiciatis", value: "id-7"}, {text: "Sed ut perspiciatis", value: "id-8"}]
-          })(data-select, data-validate-type="select", data-name="system-type", data-id="order-form-system-type").order-form__select
+            optionsList: [{text: "Sed ut perspiciatis", value: "Sed-ut-perspiciatis"}, {text: "Nemo enim ipsam", value: "Nemo-enim-ipsam"}, {text: "Et harum quidem", value: "Et-harum-quidem"}, {text: "Temporibus autem", value: "Temporibus-autem"}, {text: "Itaque earum rerum", value: "Itaque-earum-rerum"}, {text: "Sed ut perspiciatis", value: "id-6"}, {text: "Sed ut perspiciatis", value: "id-7"}, {text: "Sed ut perspiciatis", value: "id-8"}]
+          })(data-select, data-validate-type="select", data-name="system-type", data-id="order-form-system-type" required).order-form__select
         label.order-form__label.order-form__label--email
           span.visually-hidden E-mail
-          input.order-form__input(type="text" name="email" placeholder="Ваш e-mail")
+          input.order-form__input(type="text" name="email" placeholder="Ваш e-mail" required)
         label.order-form__label.order-form__label--name
           span.visually-hidden Имя
-          input.order-form__input(type="text" name="name" placeholder="Ваше имя" i)
+          input.order-form__input(type="text" name="name" placeholder="Ваше имя" required)
         label.order-form__label.order-form__label--slider.order-slider
           .order-slider__wrapper
             span.order-slider__text Sed ut perspiciatis, unde omnis iste natus
             span(data-form-percent-value).order-slider__value 75%
-          input.order-form__input.visually-hidden(type="text" name="name" placeholder="Процент")
+          input.order-form__input.visually-hidden(type="text" name="percent" placeholder="Процент" value="75%" data-order-percent)
           span.order-slider__slider.noui-slider(data-form-slider)
         label.order-form__label.order-form__label--file.input-file.btn.btn--download
           +icon("icon_file", 20, 20).input-file__icon
           span.input-file__text Прикрепить файл
-          input.order-form__download.visually-hidden(type="file" name="file" data-input-file)
+          input.order-form__download.visually-hidden(type="file" name="file" data-input-file required)
         input.order-form__submit.btn.btn--primary.btn--submit(type="submit" value="Отправить")

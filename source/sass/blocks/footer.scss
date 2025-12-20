@@ -1,5 +1,71 @@
 .footer {
-  padding: 40px 0;
-
+  padding: 32px 0 30px;
   background-color: $color-background-footer;
+
+  .container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    &>* {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 39px;
+    }
+
+    &>*:not(:first-child) {
+      border-left: 1px solid $color-default-white;
+    }
+  }
+}
+
+.footer .footer__credits {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: -0.1px;
+  color: $color-default-white;
+  margin-right: 42px;
+  gap:4px;
+}
+
+.footer__credits>span:first-child {
+  text-transform: uppercase;
+  margin-left: 2px;
+  letter-spacing: 0.1px;
+}
+
+.footer .footer-payments {
+  padding: 0 44px 0 40px;
+}
+.footer .footer-contacts {
+  padding: 0 35px;
+  gap: 48px;
+}
+
+
+
+.footer-list__item span,
+.footer-list__item a {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  align-items: center;
+  color: $color-default-white;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.footer .container > :last-child {
+  padding-right: 0;
 }

@@ -2,26 +2,27 @@ mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
       .footer__credits
-        span © 2018 «LoremIpsum.net» Все права защищены.
-      ul.footer__list.footer-payments
-        li.footer-payments__item
+        span © 2018 «LoremIpsum.net» 
+        span Все права защищены.
+      ul.footer__list.footer-list.footer-payments
+        li.footer-list__item
           span
             +icon("icon_qiwi", 20, 20)
             span QIWI wallet
-        li.footer-payments__item
+        li.footer-list__item
           span 
             +icon("icon_ym", 20, 20)
             span Yandex Money
-        li.footer-payments__item
+        li.footer-list__item
           span
             +icon("icon_wm", 20, 20)
             span Web Money
-      ul.footer__list.footer-contacts
-        li.footer-contacts__item
+      ul.footer__list.footer-list.footer-contacts
+        li.footer-list__item
           a(href="mailto:info@ipsum228.com")
             +icon("icon_email", 20, 20)
             span info@ipsum228.com
-        li.footer-contacts__item
+        li.footer-list__item
           a(href="#")
             +icon("icon_vk", 20, 20)
             span Мы вконтакте

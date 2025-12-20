@@ -30,6 +30,7 @@
     border-radius: 3px;
     border: 1px solid $color-default-white;
     color: #272733;
+    background-color: rgba(255, 255, 255, 0.85);;
 
     &::placeholder {
         color: #272733
@@ -39,5 +40,5 @@
 .order-form__submit {
     grid-column: 2/3;
     order: 100;
-    margin-top: 15px;
+    margin-top: 26px;
 }
