@@ -64,3 +64,16 @@
         background-color: $color-default-black;
     }
 }
+
+.buttons-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  width: 67%;
+  gap: 30px;
+  margin-left: 1px;
+}
+
+.buttons-wrapper__button {
+  width: 183px;
+  height: 43px;
+}

@@ -29,15 +29,20 @@ mixin index-order()
       form(action="#", method="post").order__form.order-form
         label.order-form__label.order-form__label--system
           span.visually-hidden Тип системы
-          select.order-form__select(name="system-type" data-form-select data-placeholder="Выберите тип системы")
-            option(value="Sed ut perspiciatis") Sed ut perspiciatis
-            option(value="Nemo enim ipsam") Nemo enim ipsam
-            option(value="Et harum quidem") Et harum quidem
-            option(value="Temporibus autem") Temporibus autem
-            option(value="Itaque earum rerum") Itaque earum rerum
-            option(value="Sed ut perspiciatis") Sed ut perspiciatis
-            option(value="Sed ut perspiciatis") Sed ut perspiciatis
-            option(value="Sed ut perspiciatis") Sed ut perspiciatis
+          //- select.order-form__select(name="system-type" data-form-select data-placeholder="Выберите тип системы")
+          //-   option(value="Sed ut perspiciatis") Sed ut perspiciatis
+          //-   option(value="Nemo enim ipsam") Nemo enim ipsam
+          //-   option(value="Et harum quidem") Et harum quidem
+          //-   option(value="Temporibus autem") Temporibus autem
+          //-   option(value="Itaque earum rerum") Itaque earum rerum
+          //-   option(value="Sed ut perspiciatis") Sed ut perspiciatis
+          //-   option(value="Sed ut perspiciatis") Sed ut perspiciatis
+          //-   option(value="Sed ut perspiciatis") Sed ut perspiciatis
+          +custom-select({
+            placeholder: "Выберите тип системы",
+            error: "Выберите тему обращения",
+            optionsList: [{text: "Sed ut perspiciatis", value: "Sed ut perspiciatis"}, {text: "Nemo enim ipsam", value: "Nemo enim ipsam"}, {text: "Et harum quidem", value: "Et harum quidem"}, {text: "Temporibus autem", value: "Temporibus autem"}, {text: "Itaque earum rerum", value: "Itaque earum rerum"}, {text: "Sed ut perspiciatis", value: "id-6"}, {text: "Sed ut perspiciatis", value: "id-7"}, {text: "Sed ut perspiciatis", value: "id-8"}]
+          })(data-select, data-validate-type="select", data-name="system-type", data-id="order-form-system-type").order-form__select
         label.order-form__label.order-form__label--email
           span.visually-hidden E-mail
           input.order-form__input(type="text" name="email" placeholder="Ваш e-mail")
@@ -45,12 +50,13 @@ mixin index-order()
           span.visually-hidden Имя
           input.order-form__input(type="text" name="name" placeholder="Ваше имя" i)
         label.order-form__label.order-form__label--slider.order-slider
-          span Sed ut perspiciatis, unde omnis iste natus
-          span(data-form-percent-value) 75%
+          .order-slider__wrapper
+            span.order-slider__text Sed ut perspiciatis, unde omnis iste natus
+            span(data-form-percent-value).order-slider__value 75%
           input.order-form__input.visually-hidden(type="text" name="name" placeholder="Процент")
           span.order-slider__slider.noui-slider(data-form-slider)
         label.order-form__label.order-form__label--file.input-file.btn.btn--download
           +icon("icon_file", 20, 20).input-file__icon
           span.input-file__text Прикрепить файл
           input.order-form__download.visually-hidden(type="file" name="file" data-input-file)
-        input.order-form__submit.btn.btn--primary(type="submit" value="Отправить")
+        input.order-form__submit.btn.btn--primary.btn--submit(type="submit" value="Отправить")
