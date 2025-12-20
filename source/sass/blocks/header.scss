@@ -9,11 +9,55 @@
     display: flex;
     justify-content: space-between;
     max-width: 1170px;
+    position: relative;
+
+    @include vp-767 {
+      flex-flow: row wrap;
+      padding: 0;
+      align-items: center;
+    }
   }
 
   &__logo {
     color: $color-default-white;
     margin-top: 7px;
     margin-left: 3px;
+    height: auto;
+
+    @include vp-767 {
+      align-self: center;
+      margin: 0;
+    }
+  }
+
+  &__logo svg {
+    width: 244px;
+    height: 35px;
+
+    @include vp-1023 {
+      width: 200px;
+      height: auto;
+    }
+
+    @include vp-767 {
+      width: 150px;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background-color: transparent;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &__toggle svg {
+    width: 100%;
+    height: auto;
   }
 }

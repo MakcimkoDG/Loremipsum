@@ -7,6 +7,15 @@
     padding: 0;
     align-items: stretch;
     margin-bottom: 85px;
+
+    @include vp-1279 {
+        gap: 10px;
+    }
+
+    @include vp-767 {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 .process-item {
@@ -14,6 +23,19 @@
     flex-direction: column;
     width: 209px;
     align-items: center;
+
+    @include vp-1279 {
+        width: 150px;
+    }
+
+    @include vp-1023 {
+        width: 130px;
+    }
+
+    @include vp-767 {
+        width: 90%;
+        flex-direction: row;
+    }
 }
 
 .process-icon {
@@ -27,6 +49,26 @@
     background-color: $color-accent-main;
     position: relative;
     margin-bottom: 20px;
+
+    @include vp-1023 {
+        width: 75px;
+        height: 75px;
+        border-width: 3px;
+    }
+
+    @include vp-767 {
+        flex-shrink: 0;
+        margin: 0;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.process-icon svg {
+    @include vp-1023 {
+        width: 35px;
+        height: auto;
+    }
 }
 
 .process-item__text {
@@ -37,6 +79,10 @@
     text-align: center;
     color: $color-default-white;
     margin: 0 11px;
+
+    @include vp-767 {
+        text-align: start;
+    }
 }
 
 .process-item:not(:last-of-type) .process-icon::after {
@@ -52,4 +98,8 @@
             transparent 4px);
     background-size: 26px 6px;
     background-repeat: repeat-x;
+
+    @include vp-767 {
+        display: none;
+    }
 }

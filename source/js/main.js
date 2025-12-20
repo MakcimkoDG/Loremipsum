@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import { createSlider } from './modules/order-slider.js';
+import { toggleMenu } from './modules/nav-toggle.js';
 
 // ---------------------------------
 
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   mobileVhFix();
+  toggleMenu();
 
   // Modules
   // ---------------------------------

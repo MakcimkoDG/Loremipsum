@@ -53,7 +53,7 @@ mixin index-order()
           .order-slider__wrapper
             span.order-slider__text Sed ut perspiciatis, unde omnis iste natus
             span(data-form-percent-value).order-slider__value 75%
-          input.order-form__input.visually-hidden(type="text" name="percent" placeholder="Процент" value="75%" data-order-percent)
+          input.visually-hidden(type="text" name="percent" placeholder="Процент" value="75%" data-order-percent tabindex="-1")
           span.order-slider__slider.noui-slider(data-form-slider)
         label.order-form__label.order-form__label--file.input-file.btn.btn--download
           +icon("icon_file", 20, 20).input-file__icon

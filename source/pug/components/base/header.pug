@@ -28,9 +28,9 @@ mixin header(headerMods, currentUrl)
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
           +icon("logo_desktop", 244, 35)
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+      button.header__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false" data-nav-toggle)
           +icon("icon_burger", 20, 20)
+      nav.main-nav(data-main-nav)
         .main-nav__wrapper
           ul.main-nav__list
             each link in headerLinks

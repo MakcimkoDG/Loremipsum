@@ -1,4 +1,7 @@
-
+.order-slider {
+    display: flex;
+    flex-direction: column;
+}
 
 .order-slider__text {
     font-weight: 400;
@@ -6,6 +9,10 @@
     line-height: 100%;
     letter-spacing: 0.14px;
     color: $color-default-white;
+
+    @include vp-767 {
+        margin-right: 20px;
+    }
 }
 
 .order-slider__value {
@@ -23,6 +30,10 @@
     justify-content: space-between;
     margin-top: 2px;
     margin-bottom: 22px;
+
+    @include vp-767 {
+        margin: 0 0 20px;
+    }
 }
 
 // .noui-slider {
@@ -34,12 +45,17 @@
 .noUi-target {
     border: 0;
 }
+
 .noUi-base {
     width: 100%;
     height: 6px;
     border-radius: 3px;
     border: 1px solid $color-default-white;
     background-color: rgba(255, 255, 255, 0.7);
+}
+
+.noUi-horizontal {
+        height: 6px;
 }
 
 .noUi-target .noUi-handle {
@@ -50,9 +66,15 @@
     border: 3px solid #286690;
     box-shadow: none;
     top: -11px;
+    cursor: pointer;
 
     &::after,
     &::before {
         display: none;
+    }
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 10px $color-accent-main;
     }
 }

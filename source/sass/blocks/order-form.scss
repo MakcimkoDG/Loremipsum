@@ -6,14 +6,36 @@
     max-width: 1170px;
     grid-auto-rows: minmax(48px, auto);
     margin-left: 1px;
+
+    @include vp-1023 {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-auto-flow: row dense;
+    }
+
+    @include vp-767 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .order-form__label {
     width: 100%;
-    display: block;
+    display: flex;
+    max-width: 100%;
 
     &--slider {
         grid-column: span 2;
+
+        @include vp-767 {
+            flex-direction: column;
+        }
+    }
+
+    @include vp-767 {
+        box-sizing: border-box;
+        justify-content: center;
+        max-width: 473px;
     }
 }
 
@@ -30,10 +52,30 @@
     border-radius: 3px;
     border: 1px solid $color-default-white;
     color: #272733;
-    background-color: rgba(255, 255, 255, 0.85);;
+    background-color: rgba(255, 255, 255, 0.85);
+    
+    @include vp-1023 {
+        max-width: 473px;
+    }
+
+    @include vp-767 {
+        margin: 0;
+        font-size: 16px;
+    }
 
     &::placeholder {
         color: #272733
+    }
+
+    &:hover,
+    &:focus {
+        background-color: rgba(61, 64, 80, 0.85);
+        border-color: rgba(61, 64, 80, 0.85);
+        outline: none;
+
+        &::placeholder {
+            color: $color-default-white
+        }
     }
 }
 
@@ -41,4 +83,13 @@
     grid-column: 2/3;
     order: 100;
     margin-top: 26px;
+
+    @include vp-1023 {
+        grid-column: span 2;
+    }
+
+    @include vp-767 {
+        width: 100%;
+        max-width: 473px;
+    }
 }
